@@ -86,6 +86,44 @@ ingresso.idevento = eventoID;
 
 await ingresso.save();
 
+const evento = await Evento.findById(eventoID);
+
+if(ingresso.tipoIngresso === 'Assento Norte'){
+    let newCapacidade = evento.assentoNorte.capacidadeN - ingresso.quantidade;
+  
+    evento.assentoNorte.capacidadeN = newCapacidade;
+   
+}
+if(ingresso.tipoIngresso === 'Assento Sul'){
+    let newCapacidade = evento.assentoNorte.capacidadeS - ingresso.quantidade;
+  
+    evento.assentoSul.capacidadeS = newCapacidade;
+   
+}
+
+if(ingresso.tipoIngresso === 'Assento Leste'){
+    let newCapacidade = evento.assentoNorte.capacidadeL - ingresso.quantidade;
+  
+    evento.assentoLeste.capacidadeL = newCapacidade;
+   
+}
+
+if(ingresso.tipoIngresso === 'Assento Oeste'){
+    let newCapacidade = evento.assentoNorte.capacidadeO - ingresso.quantidade;
+  
+    evento.assentoOeste.capacidadeO = newCapacidade;
+   
+}
+
+if(ingresso.tipoIngresso === 'Assento Camarote'){
+    let newCapacidade = evento.assentoNorte.capacidadeC - ingresso.quantidade;
+  
+    evento.assentoCamarote.capacidadeC = newCapacidade;
+   
+}
+
+await evento.save();
+
 await User.findByIdAndUpdate(userID, {
     // $set: {
     //     carrinhoCliente: ''
