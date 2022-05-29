@@ -1,4 +1,5 @@
 const Ingresso = require('../Model/index')
+const Evento = require('../../Evento/Model/index')
 const User = require('../../User/Model/index')
 
 async function createIngresso(req, res) {
