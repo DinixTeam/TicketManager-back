@@ -10,6 +10,9 @@ const IngressoSchema = new mongoose.Schema(
       type: mongoose.SchemaTypes.ObjectId,
       ref: 'Evento'
     },
+    idevento: {
+      type: String,
+    },
     tipoIngresso: {
       type: String,
     },

@@ -29,7 +29,8 @@ const ingresso = await Ingresso.create({
     tipoIngresso: tipoIngresso,
     quantidade: quantidade,
     valorFinal: valorFinal,
-    evento: eventoID
+    evento: eventoID,
+    idevento: eventoID
 })
 
 await User.findByIdAndUpdate(userID, {
