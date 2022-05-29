@@ -96,28 +96,28 @@ if(ingresso.tipoIngresso === 'Assento Norte'){
    
 }
 if(ingresso.tipoIngresso === 'Assento Sul'){
-    let newCapacidade = evento.assentoNorte.capacidadeS - ingresso.quantidade;
+    let newCapacidade = evento.assentoSul.capacidadeS - ingresso.quantidade;
   
     evento.assentoSul.capacidadeS = newCapacidade;
    
 }
 
 if(ingresso.tipoIngresso === 'Assento Leste'){
-    let newCapacidade = evento.assentoNorte.capacidadeL - ingresso.quantidade;
+    let newCapacidade = evento.assentoLeste.capacidadeL - ingresso.quantidade;
   
     evento.assentoLeste.capacidadeL = newCapacidade;
    
 }
 
 if(ingresso.tipoIngresso === 'Assento Oeste'){
-    let newCapacidade = evento.assentoNorte.capacidadeO - ingresso.quantidade;
+    let newCapacidade = evento.assentoOeste.capacidadeO - ingresso.quantidade;
   
     evento.assentoOeste.capacidadeO = newCapacidade;
    
 }
 
 if(ingresso.tipoIngresso === 'Assento Camarote'){
-    let newCapacidade = evento.assentoNorte.capacidadeC - ingresso.quantidade;
+    let newCapacidade = evento.assentoCamarote.capacidadeC - ingresso.quantidade;
   
     evento.assentoCamarote.capacidadeC = newCapacidade;
    
