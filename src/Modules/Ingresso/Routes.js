@@ -31,6 +31,7 @@ routes.route('/ingressopagamento').put(
       copyPaste: Joi.string().allow(null, '').max(500),
       userID: Joi.string().required(),
       ingressoID: Joi.string().required(),
+      eventoID: Joi.string().required(),
       parcelas: Joi.number().required(),
     }),
   }),
