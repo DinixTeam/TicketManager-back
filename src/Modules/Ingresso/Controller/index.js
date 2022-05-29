@@ -50,7 +50,7 @@ async function finalizaPagamento(req, res) {
 
 try {
 
-const { tipoPagamentoNumber, numero, titular, cpf, data, boleto, qrCode, copyPaste, ingressoID, userID, parcelas, idevento } = req.body;
+const { tipoPagamentoNumber, numero, titular, cpf, data, boleto, qrCode, copyPaste, ingressoID, userID, parcelas, eventoID } = req.body;
 
 const ingresso = await Ingresso.findById(ingressoID)
 
