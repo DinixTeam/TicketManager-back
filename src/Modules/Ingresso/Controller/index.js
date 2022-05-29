@@ -85,9 +85,9 @@ ingresso.parcelas = parcelas;
 await ingresso.save();
 
 await User.findByIdAndUpdate(userID, {
-    $set: {
-        carrinhoCliente: ''
-    },
+    // $set: {
+    //     carrinhoCliente: ''
+    // },
     $push: {
         ingressosCliente: ingresso._id
     }
